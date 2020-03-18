@@ -3,6 +3,7 @@ package com.sda.pid;
 import com.fasterxml.jackson.annotation.*;
 
 import java.util.Map;
+import java.util.Objects;
 
 @JsonRootName(value = "name")
 @JsonPropertyOrder({"name", "id"})
@@ -47,5 +48,18 @@ public class Member {
         str.append(", id: ");
         str.append(id);
         return str.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return id.equals(member.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

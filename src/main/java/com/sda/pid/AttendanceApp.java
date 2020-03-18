@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AttendanceApp {
 
@@ -22,16 +23,15 @@ public class AttendanceApp {
 
         Members members = null;
         try {
-
-            URL resource = ClassLoader.getSystemClassLoader().getResource("member-list.JSON");
+            String fileName = "member-list.JSON";
+            URL resource = ClassLoader.getSystemClassLoader().getResource(fileName);
             if (resource == null) {
-                System.out.println("There is no such file exists!: " + "member-list-1.JSON");
+                System.out.println("There is no such file exists!: " + fileName);
             } else {
                 File jsonFile = new File(resource.getFile());
                 members = mapper.readValue(jsonFile, Members.class);
-                System.out.println("member-list.json is loaded.");
+                System.out.println(fileName + " file is loaded.");
             }
-
         } catch (IOException e) {
             System.out.println("Error opening the file: " + e.getMessage());
         }
@@ -47,11 +47,19 @@ public class AttendanceApp {
             System.out.println("(6) Quit.");
 
             option = Integer.parseInt(in.nextLine());
-            if (option == 1) {
+            if (option == 1) {  //Show members from file
                 if (members == null){
                     System.out.println("There are no members found!");
                 } else {
                     System.out.println(members);
+                    System.out.println("Duplicate ids:");
+
+                    List<Member> memberList = members.getMembers();
+                    Set<Member> tempSet = new HashSet<>();
+
+                    memberList.stream().filter(member -> !tempSet.add(member)).collect(Collectors.toSet()).forEach(member -> {
+                        System.out.println("Member id: " + member.getId());
+                    });
                 }
             } else if (option == 2) {
 
