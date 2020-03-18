@@ -2,35 +2,35 @@
   "members": [
     {
       "name": "David Yu",
-      "id": "f1f7"
+      "id": "one"
     },
     {
       "name": "Mazen Bahy",
-      "id": "8c48"
+      "id": "two"
     },
     {
       "name": "Kwabena Asante-poku",
-      "id": "f4d7"
+      "id": "three"
     },
     {
       "name": "Philipp Haller",
-      "id": "fe2d"
+      "id": "four"
     },
     {
       "name": "Ric Glassey",
-      "id": "177f"
+      "id": "five"
     },
     {
       "name": "Micky Mouse",
-      "id": "22be"
+      "id": "six"
     },
     {
       "name": "Steve Jobs",
-      "id": "7f76"
+      "id": "seven"
     },
     {
       "name": "Batman Bin Suparman",
-      "id": "cbd1"
+      "id": "eight"
     }
   ]
 }
