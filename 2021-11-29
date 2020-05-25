@@ -1,0 +1,32 @@
+{
+  "date" : "2021-11-29",
+  "attended" : [ {
+    "name" : "David Yu",
+    "id" : "one"
+  }, {
+    "name" : "Mazen Bahy",
+    "id" : "two"
+  }, {
+    "name" : "Kwabena Asante-poku",
+    "id" : "three"
+  }, {
+    "name" : "Philipp Haller",
+    "id" : "four"
+  }, {
+    "name" : "Batman Bin Suparman",
+    "id" : "eight"
+  } ],
+  "unattended" : [ {
+    "name" : "Ric Glassey",
+    "id" : "five"
+  }, {
+    "name" : "Micky Mouse",
+    "id" : "six"
+  }, {
+    "name" : "Steve Jobs",
+    "id" : "seven"
+  }, {
+    "name" : "Hello World",
+    "id" : "eight"
+  } ]
+}
